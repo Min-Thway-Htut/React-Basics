@@ -5,7 +5,7 @@ import Pears from "./Pears";
 import Card from "./Card";
 import Btn from "./Btn";
 import ModeToggler from "./ModeToggler";
-
+import RandomNumber from "./RandomNumber";
 
 function App(){
   return (
@@ -24,7 +24,8 @@ function App(){
       </Bag>
 
       <ModeToggler />
-    </div>
+      <RandomNumber />
+       </div>
   );
 }
 
