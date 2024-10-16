@@ -1,4 +1,3 @@
-import Heading from "./Heading";
 import Bag from "./Bag";
 import Apples from "./Apples";
 import Pears from "./Pears";
@@ -8,6 +7,7 @@ import ModeToggler from "./ModeToggler";
 import RandomNumber from "./RandomNumber";
 
 function App(){
+
   return (
     <div className="App">
       <Btn />
@@ -16,8 +16,7 @@ function App(){
       <Card h2="Second card's h2" h3="Second card's h3" />
       <Card h2="Third card's h2" h3="Third card's h3" />
       
-      <Heading firstName="Bob" />
-      <Heading firstName="Any name other than Bob" />
+    
       <Bag>
         <Apples color="yellow" number="5" />
         <Pears friend="Peter" />
@@ -25,6 +24,7 @@ function App(){
 
       <ModeToggler />
       <RandomNumber />
+
        </div>
   );
 }

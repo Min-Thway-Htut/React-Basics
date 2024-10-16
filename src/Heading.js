@@ -1,6 +1,6 @@
 function Heading(props){
     return (
-        <h1>Hello, {props.firstName}</h1>
+        <h1>{props.message}</h1>
     )
 }
 
