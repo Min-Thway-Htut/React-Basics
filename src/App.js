@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Fruits from "./Fruits";
 import FruitsCounter from "./FruitsCounter";
 
@@ -18,12 +18,18 @@ function App(){
     {fruitName: 'plum', id: 3}
   ]);
 
+    const [count, setCount] = useState(0);
+  
+
 
   return(
     <div className="App">
       <h1>where should the state go?</h1>
       <Fruits fruits={fruits} />
       <FruitsCounter fruits={fruits} />
+
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
     </div>
   );
 }
