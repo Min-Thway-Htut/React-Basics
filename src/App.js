@@ -1,31 +1,30 @@
-import Bag from "./Bag";
+import React from "react";
+import Fruits from "./Fruits";
+import FruitsCounter from "./FruitsCounter";
+
+{ /*import Bag from "./Bag";
 import Apples from "./Apples";
 import Pears from "./Pears";
 import Card from "./Card";
 import Btn from "./Btn";
 import ModeToggler from "./ModeToggler";
-import RandomNumber from "./RandomNumber";
+import RandomNumber from "./RandomNumber"; */}
 
 function App(){
 
-  return (
+  const [fruits] = React.useState([
+    {fruitName: 'apple', id: 1},
+    {fruitName: 'apple', id: 2},
+    {fruitName: 'plum', id: 3}
+  ]);
+
+
+  return(
     <div className="App">
-      <Btn />
-      <h1>Task: Add three Card elements</h1>
-      <Card h2="First card's h2" h3="First card's h3" />
-      <Card h2="Second card's h2" h3="Second card's h3" />
-      <Card h2="Third card's h2" h3="Third card's h3" />
-      
-    
-      <Bag>
-        <Apples color="yellow" number="5" />
-        <Pears friend="Peter" />
-      </Bag>
-
-      <ModeToggler />
-      <RandomNumber />
-
-       </div>
+      <h1>where should the state go?</h1>
+      <Fruits fruits={fruits} />
+      <FruitsCounter fruits={fruits} />
+    </div>
   );
 }
 
