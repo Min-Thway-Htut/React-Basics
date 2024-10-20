@@ -1,37 +1,29 @@
 import React, { useState } from "react";
-import Fruits from "./Fruits";
-import FruitsCounter from "./FruitsCounter";
+import {Routes, Route, Link} from "react-router-dom";
+import "./App.css";
+import Contact from "./Contact";
+import Homepage from "./Homepage";
+import AboutLittleLemon from "./AboutLittleLemon";
+import javaScript from "./assets/javaScript.png";
 
-{ /*import Bag from "./Bag";
-import Apples from "./Apples";
-import Pears from "./Pears";
-import Card from "./Card";
-import Btn from "./Btn";
-import ModeToggler from "./ModeToggler";
-import RandomNumber from "./RandomNumber"; */}
 
 function App(){
-
-  const [fruits] = React.useState([
-    {fruitName: 'apple', id: 1},
-    {fruitName: 'apple', id: 2},
-    {fruitName: 'plum', id: 3}
-  ]);
-
-    const [count, setCount] = useState(0);
-  
-
-
   return(
-    <div className="App">
-      <h1>where should the state go?</h1>
-      <Fruits fruits={fruits} />
-      <FruitsCounter fruits={fruits} />
-
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>Click me</button>
+    <div>
+      <h1>Task: Add an image below</h1>
+      <img src={javaScript} alt="javaScript Logo" />
+      <nav>
+        <Link to="/" className="nav-item">Homepage</Link>
+        <Link to="/about" className="nav-item">About Little Lemon</Link>
+        <Link to="/contact" className="nav-item"></Link> 
+      </nav>
+      <Routes>
+        <Route path="/" element={<Homepage />}></Route>
+        <Route path="/about" element={<AboutLittleLemon />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
+      </Routes>
     </div>
-  );
+  )
 }
 
 export default App;
